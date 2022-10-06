@@ -22,15 +22,15 @@ Output: 1
 
 **Solution**
 ```js
-const singleNumber = (nums) => {
-  for(let i = 0; i < nums.length; i++){
-    let count = 1
-    for(let j = 0; j < nums.length; j++){
-      if (i !== j && nums[i] === nums[j]){
-        count ++
+    const singleNumber = (nums) => {
+      for(let i = 0; i < nums.length; i++){
+        let count = 1
+        for(let j = 0; j < nums.length; j++){
+          if (i !== j && nums[i] === nums[j]){
+            count ++
+          }
+        }
+        if (count === 1) return nums[i]
       }
     }
-    if (count === 1) return nums[i]
-  }
-}
 ```

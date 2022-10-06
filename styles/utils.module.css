@@ -21,10 +21,17 @@
 }
 
 .headingMd {
+  align-items: center;
+  text-align: center;
   font-size: 1.2rem;
   line-height: 1.5;
 }
 
+.mainText {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #DDE3F8;
+}
 .borderCircle {
   border-radius: 9999px;
 }
@@ -38,6 +45,8 @@
 }
 
 .list {
+  align-items: center;
+  text-align: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -47,6 +56,3 @@
   margin: 0 0 1.25rem;
 }
 
-.lightText {
-  color: #666;
-}

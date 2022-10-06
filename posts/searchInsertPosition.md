@@ -23,11 +23,11 @@ Output: 4
 
 **Solution**
 ```js
-const searchInsert = (nums, target) => {
-    if(nums.includes(target)) return nums.indexOf(target)
-    if(nums[nums.length -1]<target) return nums.length
-    for(i=0; i<nums.length; i++){
-        if(nums[i]>target) return nums.indexOf(nums[i])
-    }
-};
+    const searchInsert = (nums, target) => {
+        if(nums.includes(target)) return nums.indexOf(target)
+        if(nums[nums.length -1]<target) return nums.length
+        for(i=0; i<nums.length; i++){
+            if(nums[i]>target) return nums.indexOf(nums[i])
+        }
+    };
 ```

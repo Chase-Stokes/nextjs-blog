@@ -21,21 +21,21 @@ Step 6) 1 is odd; subtract 1 and obtain 0.
 
 **Solution**
 ```js
-const numberOfSteps = (num) => {
-    const recurse = (num, count) => {
-        if(num != 0){
-            switch(num % 2) {
-                case 0:
-                    return recurse((num/2), (count + 1));
-                    break;
-                case 1:
-                    return recurse((num - 1), count + 1);
-                    break;
-                default: return recurse(num, count);
-            }
-        } else return count
-    }
-    let output = recurse(num, 0)
-    return output;
-};
+    const numberOfSteps = (num) => {
+        const recurse = (num, count) => {
+            if(num != 0){
+                switch(num % 2) {
+                    case 0:
+                        return recurse((num/2), (count + 1));
+                        break;
+                    case 1:
+                        return recurse((num - 1), count + 1);
+                        break;
+                    default: return recurse(num, count);
+                }
+            } else return count
+        }
+        let output = recurse(num, 0)
+        return output;
+    };
 ```

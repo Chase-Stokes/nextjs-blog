@@ -25,14 +25,14 @@ Explanation: The unique elements are [1,2,3,4,5], and the sum is 15.
 
 **Solution**
 ```js
-const sumOfUnique = (num) => {
-  let output = 0
-  const uniqueArray = nums.filter(element => {
-    return nums.indexOf(element) === nums.lastIndexOf(element)
-  })
-  uniqueArray.forEach(function(element){
-    output += element
-  })
-  return output
-};
+    const sumOfUnique = (num) => {
+      let output = 0
+      const uniqueArray = nums.filter(element => {
+        return nums.indexOf(element) === nums.lastIndexOf(element)
+      })
+      uniqueArray.forEach(function(element){
+        output += element
+      })
+      return output
+    };
 ```

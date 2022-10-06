@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import * as para from '../constants/constants'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -20,11 +21,14 @@ export default function Home({allPostsData}: { allPostsData : { date: string, ti
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>Hi I'm Chase! I am a Fullstack Engineer with a passion for TypeScript, Web Design, and Problem Solving. I am looking forward to the next step in my transition from the service industry into tech. Most recently I have been working as an intern for a Software company developing an app for High School students. Working on complex features like a Rich Text Editor, Data Visualization, and custom React components has been an increduble and irreplaceable opportunity. I am certain that my experience as a cook and server, which are enviornments that only function correctly when working together, will make me a valuable asset to my future team as an engineer.</p>
+      <hr />
+      <section className={utilStyles.mainText}>
+        <p>{para.para1}</p>
+        <p>{para.para2}</p>
       </section>
+      <hr />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>Coding Problems</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
@@ -32,7 +36,7 @@ export default function Home({allPostsData}: { allPostsData : { date: string, ti
                 <a>{title}</a>
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small className={utilStyles.mainText}>
                 <Date dateString={date} />
               </small>
             </li>

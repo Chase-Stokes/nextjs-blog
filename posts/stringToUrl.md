@@ -14,31 +14,33 @@ Input: "Jasmine Ann Jones"
 Output: "Jasmine%20Ann%20Jones"
 
 **Solution**
+
 ```js
-const replace = (input) => {
-  let arr = input.split('')
-  let output = []
-  arr.forEach(function(element){
-    if(element === " "){
-      output.push('%20')
-    }else {
-      output.push(element)
-    }
-  })
-  return output.join('')
-};
+    const replace = (input) => {
+      let arr = input.split('')
+      let output = []
+      arr.forEach(function(element){
+        if(element === " "){
+          output.push('%20')
+        }else {
+          output.push(element)
+        }
+      })
+      return output.join('')
+    };
 ```
+
 
 **Refactored Solution**
 ```js
-const replace = (input) => {
-  let a = input.split('')
-  let b = a.indexOf(' ')
-  a[b] = '%20'
-  if(a.includes(' ')){
-    return replace(a.join(''))
-  }else {
-    return a.join('')
-  }
-}
+    const replace = (input) => {
+      let a = input.split('')
+      let b = a.indexOf(' ')
+      a[b] = '%20'
+      if(a.includes(' ')){
+        return replace(a.join(''))
+      }else {
+        return a.join('')
+      }
+    }
 ```
