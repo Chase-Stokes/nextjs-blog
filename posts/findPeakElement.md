@@ -26,11 +26,11 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 **Solution**
 ```js
-  const findPeakElement = (nums) => {
-    let highestNum = nums[0]
-    for(let i = 0; i < nums.length; i++){
-      if(nums[i] < highestNum) highestNum = nums[i]
-    }
-    return nums.indexOf(highestNum)
-  };
+const findPeakElement = (nums) => {
+  let highestNum = nums[0]
+  for(let i = 0; i < nums.length; i++){
+    if(nums[i] < highestNum) highestNum = nums[i]
+  }
+  return nums.indexOf(highestNum)
+};
 ```

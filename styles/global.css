@@ -40,23 +40,19 @@ hr {
 }
 
 code {
-  /* width: fit-content; */
-  margin: 10px;
-  color: black;
+  color: #DDE3F8;
+  width: inherit;
 }
 
 pre {
-  padding-top: 10px;
-  padding-bottom: 15px;
-  border-radius: 5px;
-  background-color: #c8c8c8;
+  width: inherit;
   cursor: crosshair;
 }
 
 @media all and (max-width: 500px) {
   body {
-    width: 800px;
-    margin: 0;
-    padding: 0;
+    width: auto;
+    align-items: center;
+    align-content: center;
   }
 }

@@ -36,21 +36,21 @@ Explanation: No pairs can be formed, and there is 1 number leftover in nums.
 
 **Solution**
 ```js
-  const numberOfPairs = (nums) => {
-    nums.sort()
-    let count = 0
-    let remainder = 0
-    for(let i = 0; i <= nums.length; i++){
-      if(nums[0] !== nums[1]){
-        nums.splice(0, 1)
-        remainder++
-        i=0
-      }else {
-        nums.splice(0, 2)
-        count++
-        i=0
-      }
+const numberOfPairs = (nums) => {
+  nums.sort()
+  let count = 0
+  let remainder = 0
+  for(let i = 0; i <= nums.length; i++){
+    if(nums[0] !== nums[1]){
+      nums.splice(0, 1)
+      remainder++
+      i=0
+    }else {
+      nums.splice(0, 2)
+      count++
+      i=0
     }
-    return [count, remainder]
-  };
+  }
+  return [count, remainder]
+};
 ```

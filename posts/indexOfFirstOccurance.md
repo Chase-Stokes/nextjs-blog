@@ -19,11 +19,11 @@ Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
 **Solution**
 ```js
-    const strStr = (haystack, needle) => {
-        if(!haystack.includes(needle)) return -1
-        else {
-            haystack.split(needle)
-            return haystack.indexOf(needle)
-        }
-    };
+const strStr = (haystack, needle) => {
+    if(!haystack.includes(needle)) return -1
+    else {
+        haystack.split(needle)
+        return haystack.indexOf(needle)
+    }
+};
 ```

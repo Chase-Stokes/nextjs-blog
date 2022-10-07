@@ -20,22 +20,22 @@ Explanation: There is no common prefix among the input strings.
 
 **Solution**
 ```js
-    const longestCommonPrefix = (strs) => {
-        let output = ''
-        for(i=0; i<strs[0].length; i++){
-            let temp = strs[0][i]
-            let boolCheck = true
-            strs.forEach(function(element){
-                if(element[i] !== temp){
-                    boolCheck = false
-                }
-            })
-            if(boolCheck === true){
-                output += temp
-            } else {
-                return output
+const longestCommonPrefix = (strs) => {
+    let output = ''
+    for(i=0; i<strs[0].length; i++){
+        let temp = strs[0][i]
+        let boolCheck = true
+        strs.forEach(function(element){
+            if(element[i] !== temp){
+                boolCheck = false
             }
+        })
+        if(boolCheck === true){
+            output += temp
+        } else {
+            return output
         }
-        return output
-    };
+    }
+    return output
+};
 ```
